@@ -1,26 +1,35 @@
 
 class Node():
+    """ Node class for a linked list """
+    def __init__( self, value, next=None ) -> None:
+        """
+        Initialize a node with a value and a next node.
 
-    def __init__( self, data, next=None ) -> None:
-        self.data = data
+        Args:
+            value: The value of the node.
+            next: The next node.
+        """
+        self.value = value
         self.next = next
 
 
 if __name__ == "__main__":
 
-    node1 = Node
-    node2 = Node( "A", None )
-    node3 = Node( "B", node2 )
+    # Crear nodos
+    node1 = Node(1)
+    node2 = Node(2)
+    node3 = Node(3)
 
-    print( node2 )
-    print( node2.data )
-    print( node3.next )
-    print( node3.next.data )
+    # Establecer enlaces entre los nodos
+    node1.next = node2
+    node2.next = node3
+    
+    # Nuevo nodo
+    node4 = Node(4)
+    node3.next = node4
 
-    head = None
-    for count in range(1,5):
-        head = Node(count, head)
-
-    while head != None:
-        print( head.data )
-        head = head.next
+    # Imprimir los valores de los nodos
+    current_node = node1
+    while current_node is not None:
+        print(current_node.value)
+        current_node = current_node.next
