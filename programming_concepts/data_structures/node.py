@@ -13,6 +13,21 @@ class Node():
         self.next = next
 
 
+class TwoWayNode( Node ):
+    def __init__(self, value, previous=None, next=None) -> None:
+        """
+        Initialize a two way node with a value, previous and next node.
+
+        Args:
+            value: The value of the node.
+            previous: The previous node.
+            next: The next node.
+        """
+        super().__init__(value, next= next)
+        self.previous = previous
+
+
+
 if __name__ == "__main__":
 
     # Crear nodos
