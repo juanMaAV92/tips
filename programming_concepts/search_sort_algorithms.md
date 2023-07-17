@@ -7,22 +7,18 @@ What is the worst-case scenario for the following code? If we look closely, ther
 ```python
 import random
 
-def linear_search(list, target):
-    match = False
-
-    for element in list:  # O(n)
+def linear_search(lst, target):
+    for element in lst:  # O(n)
         if element == target:
-            match = True
-            break
-
-    return match
+            return True
+    return False
 
 
 if __name__ == '__main__':
     list_size = int(input('What is the size of the list? '))
     target = int(input('Which number do you want to find? '))
 
-    list = [random.randint(0, 100) for i in range(list_size)]
+    lst = [random.randint(0, 100) for _ in range(list_size)]
 
     found = linear_search(list, target)
     print(list)
@@ -34,6 +30,7 @@ if __name__ == '__main__':
 The binary search algorithm follows a strategy called "Divide and Conquer," which involves dividing the problem in half at each iteration. This algorithm assumes that the list is sorted, so it is necessary to perform this step first.
 
 Binary search is one of the most efficient search algorithms available today, as it significantly reduces the number of steps, thus decreasing our Big O complexity.
+
 <div align="center">
   <h4>Average Case</h4>
 </div>
@@ -42,7 +39,7 @@ Binary search is one of the most efficient search algorithms available today, as
 </div>
 
 
-Remember to ensure that the list is sorted before using the binary search algorithm. To see the code implementation of binary search, you can use the following code:
+The time complexity of binary search is __O(log n)__, where __n__ is the size of the list.
 
 ```python
 def binary_search(list, target):
@@ -61,6 +58,16 @@ def binary_search(list, target):
             right = mid - 1
 
     return False
+
+if __name__ == '__main__':
+    list_size = int(input('What is the size of the list? '))
+    target = int(input('Which number do you want to find? '))
+
+    lst = sorted([random.randint(0, 100) for _ in range(list_size)])
+
+    found = binary_search(list, target)
+    print(list)
+    print(f'The element {target} {"is" if found else "is not"} in the list')
 ```
 
 # Bubble Sort
@@ -75,14 +82,21 @@ It is an algorithm that repeatedly traverses a list that needs to be sorted. It 
 import random
 
 def bubble_sort(list):
-    n = len(list)
+    n = len(lst)
+    swapped = True
 
     for i in range(n):
-        for j in range(0, n - i - 1):  # O(n) * O(n) = O(n * n) = O(n**2)
-            if list[j] > list[j + 1]:
-                list[j], list[j + 1] = list[j + 1], list[j]
+        if not swapped:
+            break
 
-    return list
+        swapped = False
+
+        for j in range(0, n - i - 1):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+                swapped = True
+
+    return lst
 
 if __name__ == '__main__':
     list_size = int(input('What is the size of the list? '))
