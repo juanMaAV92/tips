@@ -93,4 +93,14 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 exit
 ```
 
-    - Follow the instruction
+- Follow the instruction
+
+- To set enviroment variable
+
+    ```sh
+    cd ~
+    nano .zshenv
+    source .zshenv
+    ```
+
+- add ``` typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet``` in __~/.p10k.zsh__
