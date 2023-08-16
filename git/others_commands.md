@@ -25,4 +25,7 @@ git push origin --tags
 
 git clean --dry-run    # Remove unwanted files
 git clean -fs
+
+
+git push --delete origin tagName
 ```
