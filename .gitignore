@@ -1,4 +1,5 @@
-
-*pgadmin/*
-*postgres/*
 __pychache__/
+.vscode/
+
+pgadmin/
+postgres/
