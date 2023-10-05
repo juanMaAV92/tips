@@ -17,15 +17,15 @@ git remote set-url origin sshUrlHere
 
 ```sh
 # Find the commit hash where you want to create a tag
-git tag -a v0.1 -m "" commitHash
+    git tag -a v0.1 -m "" commitHash
 
-git tag
-git show-ref --tags
-git push origin --tags
+    git tag
+    git show-ref --tags
+    git push origin --tags
 
-git clean --dry-run    # Remove unwanted files
-git clean -fs
+    git clean --dry-run    # Remove unwanted files
+    git clean -fs
 
 
-git push --delete origin tagName
+    git push --delete origin tagName
 ```

@@ -1,25 +1,25 @@
 # Basic commands
 
 - Adding Files to Staging
-    ```sh
+```sh
     # Add all modified and new files
     git add .
 
     # Add a specific file
     git add file.ext
-    ```
+```
 
 - Removing Files
-    ```sh
+```sh
     # Remove files from staging but keep them in the local file system
     git rm --cached file.ext
 
     # Remove files from Git and local file system
     git rm --force file.ext
-    ```
+```
 
 - Committing Changes
-    ```sh
+```sh
     # Commit changes with a message
     git commit -m "Commit message"
 
@@ -28,19 +28,25 @@
 
     # Amend the previous commit by adding changes
     git commit --amend
-    ```
+
+    # Amend the previous commit by adding changes with not description text
+    git commit --amend --no-edit
+```
 
 - Pushing Changes to Remote Repository
-    ```sh
+```sh
     # Push changes to a specific branch in the remote repository
     git push -u origin branchName
 
+    # Force push changes to a specific branch in the remote repository
+    git push -f origin branchName
+
     # Push changes to all branches in the remote repository
     git push -u origin --all
-    ```
+```
 
 - Pulling Changes from Remote Repository
-    ```sh
+```sh
     # Pull changes from the current branch in the remote repository
     git pull
 
@@ -50,4 +56,4 @@
     # Merge unrelated histories while pulling from a remote repository
     git pull origin branch_name --allow-unrelated-histories
 
-    ```
+```
