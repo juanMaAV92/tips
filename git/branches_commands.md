@@ -1,5 +1,11 @@
 # Branches commands
 
+Una rama es simplemente una cadena de confirmaciones que se ramifica a partir de la línea principal de desarrollo, como una rama de un árbol. Normalmente, una rama comienza con una confirmación en la rama predeterminada; en este caso, en main. A medida que se agregan confirmaciones, la rama desarrolla una cadena de historial independiente. Finalmente, los cambios de la rama se vuelven a combinar en main. 
+
+Puede crear una rama con el comando git branch. Cambie entre las ramas con el comando git checkout
+
+
+
 - Change the name of the branch 
     ```sh
     git branch -m oldName newName
@@ -71,7 +77,7 @@
     # Reapply commits on top of another branch. The specified branch will be used as the new base for the current branch.
     git rebase branch               
     ```
-
+Git usa un formato especial para ayudarle a identificar y resolver el conflicto: corchetes angulares de apertura <<<<<<<, guiones dobles (signos igual) ======= y corchetes angulares de cierre >>>>>>>. El contenido situado encima de la línea de guiones ======= muestra los cambios en la rama. El contenido que se encuentra debajo de la línea de separación muestra la versión del contenido de la rama en la que intenta realizar la combinación.
 
 ## moving through time without return
 
