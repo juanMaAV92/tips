@@ -1,4 +1,4 @@
-# Data definition Languaje (create, alter, drop)
+# Data definition Languaje (Create, Alter, Drop, Truncate)
 
 
 ## CREAT A DB

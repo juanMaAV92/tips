@@ -1,4 +1,4 @@
-# Data Manipulation Languaje (Insert, Update, Delete, Select)
+# Data Manipulation Languaje (Insert, Update, Delete)
 
 ```sql
 INSERT INTO db_name.table_name ( field_1, .... field_n )
