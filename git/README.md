@@ -15,6 +15,9 @@
     # Initialize a folder as a repository with a initial branch called "main"
     git init --initial-branch=main
 
+    # o el comando abreviado
+    git init -b main
+
     #Change the name branch 
     git branch -m currentBranchName newName
     ```
