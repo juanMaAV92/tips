@@ -3,3 +3,4 @@ __pychache__/
 
 pgadmin/
 postgres/
+.DS_Store
