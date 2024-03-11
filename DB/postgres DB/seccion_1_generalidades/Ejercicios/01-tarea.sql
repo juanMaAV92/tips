@@ -1,4 +1,5 @@
 
+-- Ejecutar las queries del archivo usuarios.sql
 
 -- 1. Ver todos los registros
 SELECT * FROM users;
