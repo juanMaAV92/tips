@@ -1,3 +1,15 @@
+-- Extraert unicamente el dominio de los correos electronicos del campo email
+SELECT
+    SUBSTRING(email, POSITION('@' IN email) + 1) as domain,
+    COUNT(domain)
+FROM
+    users
+GROUP BY
+    domain
+HAVING
+    COUNT(domain) > 1;
+
+
 
 -- 1. Cuantos usuarios tenemos con cuentas @google.com
 -- Tip: count, like
