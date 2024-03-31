@@ -8,11 +8,12 @@
     sudo apt-get install git
     ```
 
-en .zshrc agregar
+- add in ~/.zshrc
 
-export GH_USERNAME_REPOSITORY="yourUsername"
-export GH_PASSWORD_REPOSITORY="yourPassword"
-    
+    ```sh
+    export GH_USERNAME_REPOSITORY="yourUsername"
+    export GH_PASSWORD_REPOSITORY="yourPassword"
+    ```
 
 - Configuration
     ```sh
