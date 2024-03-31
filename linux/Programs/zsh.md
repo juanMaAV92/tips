@@ -25,12 +25,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
     ```
 
     - add the plugin in the plugins section
-    ```
-    plugins=(
-    git
-    zsh-syntax-highlighting
-    ) 
-    ```
+        ```
+        plugins=(
+        git
+        zsh-syntax-highlighting
+        ) 
+        ```
 
     - Save and close file
 
@@ -58,7 +58,7 @@ Download JetBrainsMono Nerd Font in [nerdfonst](https://www.nerdfonts.com/font-d
 
 - Follow the instruction
 
-## other configuration
+## other configuration.
 
 - To set enviroment variable
 
