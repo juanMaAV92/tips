@@ -2,6 +2,18 @@
 
 > Note: all variables written in camel case mean you have to replaced it with your specific case
 
+- Instalar Git en Linux
+
+    ```sh
+    sudo apt-get install git
+    ```
+
+en .zshrc agregar
+
+export GH_USERNAME_REPOSITORY="yourUsername"
+export GH_PASSWORD_REPOSITORY="yourPassword"
+    
+
 - Configuration
     ```sh
     git config --global user.name ""
