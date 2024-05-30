@@ -1,4 +1,4 @@
-# Seccion 1. Fechas
+# Seccion 6. Fechas
 
 > Nota:  crear y popular las tablas con los script ubicados`./Ejercicios/population_data/*.sql`
 
