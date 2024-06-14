@@ -1,11 +1,7 @@
-<p align="center">
-  <a href="https://www.postgresql.org/" target="blank"><img src="https://devtalles.com/images/postgresql.png" width="300" alt="postgresql Logo" /></a>
-</p>
-
 # Guía practica con PostgreSQL
 
 
-### Instalaciones recomendadas
+## Instalaciones recomendadas
 
 
 * [Docker Desktop](https://www.docker.com/get-started)
