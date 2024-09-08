@@ -1,24 +1,25 @@
 
 # FROM --platform=linux/amd64 node:20-alpine3.20
-FROM --platform=$BUILDPLATFORM node:20-alpine3.20
-
-# esta versión de linux tiene una carpeta /app donde se debe copiar el código fuente
+# FROM --platform=$BUILDPLATFORM node:20-alpine3.20
+FROM node:20-alpine3.20 as deps
 WORKDIR /app
-
 COPY package.json ./
-
 RUN npm install
 
+FROM node:20-alpine3.20 as builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Realizar testing
 RUN npm run test
 
-# Eliminar archivos y directorios que no se necesitan en Producción
-RUN rm -rf test && rm -rf node_modules
-
-# Instalar dependencias de producción
+FROM node:20-alpine3.20 as prod-deps
+WORKDIR /app
+COPY package.json ./
 RUN npm install --prod
 
-# Comando run para ejecutar la aplicación
+FROM node:20-alpine3.20 as runner
+WORKDIR /app
+COPY --from=prod-deps /app/node_modules ./node_modules
+COPY app.js ./
+COPY tasks/ ./tasks
 CMD ["node", "app.js"]
