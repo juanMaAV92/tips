@@ -6,12 +6,9 @@ services:
   app:
     build:
       context: .
-      # Variables de entorno dev, prod
       target: ${STAGE}   
       dockerfile: Dockerfile
-    volumes:
-      - .:/app
-      - /app/node_modules
+    image: userName/imageName:2.0.0
     container_name: nest-app
     ports:
       - ${PORT}:${PORT}
