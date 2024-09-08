@@ -40,5 +40,4 @@ docker buildx use <mybuilderName>
 
 # Construir una imagen
 docker buildx build --platform linux/amd64,linux/arm64 -t <user_name>/<nombre_imagen>:<tag_name> .
-
 ```
